@@ -1,0 +1,228 @@
+:root {
+  --font-profile: "Libre Bodoni", serif;
+  --font-text-content: "Montserrat", sans-serif;
+  --principal-color: #121215;
+  --color-profile2: rgb(187 152 112);
+  --secondary-color: #b7905d;
+  --secondary-color2: #000000;
+  --letters: #efe2cd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+/* parte superior de la pagina */
+header {
+  width: 100%;
+  height: 100vh;
+  background: url(../../images/Yo/IMG_20210109_191816.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: grid;
+}
+
+header div {
+  justify-self: center;
+  align-self: center;
+}
+
+header div .profile {
+  text-align: center;
+  font-size: 7rem;
+  font-weight: bold;
+  font-family: var(--font-profile);
+  color: #b7905d;
+}
+
+header div .profession {
+  font-size: 4rem;
+  text-align: center;
+  font-family: var(--font-profile);
+  font-weight: 400;
+  color: var(--principal-color);
+}
+.profession {
+  -webkit-animation: focus-in-expand 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1
+    both;
+  animation: focus-in-expand 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+}
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+/*Contenedor de la descripcion*/
+.about-me-container {
+  background-color: var(--principal-color);
+  height: 800px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.about-me {
+  max-width: 1100px;
+  align-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Imagen */
+.about-me-image {
+  width: 350px;
+  justify-self: center;
+}
+.about-me-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Texto */
+.about-me-text {
+  width: 90%;
+  display: grid;
+  grid-template-rows: 1fr 2.5fr;
+}
+.about-me-text h1 {
+  color: var(--letters);
+  font-family: var(--font-text-content);
+  font-size: 4rem;
+  margin-left: 20px;
+  align-self: center;
+}
+.about-me-text .about-me-text-info .info {
+  color: var(--letters);
+  font-family: var(--font-text-content);
+  font-size: 3rem;
+  margin-left: 20px;
+}
+
+.about-me-text .about-me-text-info .info span {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  font-family: var(--font-text-content);
+  font-weight: bold;
+}
+.contact-button {
+  display: grid;
+  margin-top: 30px;
+}
+#contact {
+  display: none;
+}
+.contact-button .contact-bt {
+  position: absolute;
+  justify-self: center;
+  font-family: var(--font-text-content);
+  font-weight: bold;
+  font-size: 2.5rem;
+  border-radius: 15px;
+  background-color: var(--secondary-color);
+  color: var(--letters);
+  height: 55px;
+  width: 230px;
+  text-align: center;
+  line-height: 55px;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+.contact-button .contact-bt2 {
+  visibility: hidden;
+  position: absolute;
+  margin-top: 15px;
+  justify-self: center;
+  height: 30px;
+  width: 60px;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 15px;
+  line-height: 30px;
+  background-color: var(--letters);
+  color: var(--secondary-color);
+  cursor: pointer;
+  transition: all 400ms ease;
+  opacity: 0;
+}
+
+.contact-button .contact-bt:hover {
+  width: 250px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 2.8rem;
+  background-color: var(--letters);
+  color: var(--secondary-color);
+}
+.contact-button .contact-bt2:hover {
+  color: var(--principal-color);
+}
+
+#contact:checked ~ .contact-bt {
+  opacity: 0;
+  display: hidden;
+}
+#contact:checked ~ .contact-bt2 {
+  opacity: 1;
+  visibility: visible;
+}
+.contact-button .icons {
+  justify-self: center;
+  margin-top: 80px;
+}
+.contact-button .icons a {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  margin-top: 20px;
+  margin-right: -20px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  color: var(--letters);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms ease;
+}
+
+.contact-button .icons a:hover {
+  background-color: var(--letters);
+  color: var(--principal-color);
+  box-shadow: 0px 1px 10px rgba(218, 218, 218, 0.6);
+}
+
+#contact:checked ~ .icons a {
+  margin-right: 7.5px;
+  margin-left: 7.5px;
+  opacity: 1;
+  visibility: visible;
+}
