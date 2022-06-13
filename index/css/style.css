@@ -98,6 +98,7 @@ header div .profession {
 .about-me-image {
   width: 350px;
   justify-self: center;
+  margin-top: 50px;
 }
 .about-me-image img {
   width: 100%;
@@ -130,9 +131,11 @@ header div .profession {
   font-family: var(--font-text-content);
   font-weight: bold;
 }
+
+/* Boton de contacto*/
 .contact-button {
   display: grid;
-  margin-top: 30px;
+  margin-top: 42px;
 }
 #contact {
   display: none;
@@ -153,6 +156,20 @@ header div .profession {
   cursor: pointer;
   transition: all 400ms ease;
 }
+.contact-button .contact-bt:hover {
+  width: 250px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 2.8rem;
+  background-color: var(--letters);
+  color: var(--secondary-color);
+}
+
+#contact:checked ~ .contact-bt {
+  opacity: 0;
+  display: hidden;
+}
+
 .contact-button .contact-bt2 {
   visibility: hidden;
   position: absolute;
@@ -172,26 +189,16 @@ header div .profession {
   opacity: 0;
 }
 
-.contact-button .contact-bt:hover {
-  width: 250px;
-  height: 60px;
-  line-height: 60px;
-  font-size: 2.8rem;
-  background-color: var(--letters);
-  color: var(--secondary-color);
-}
 .contact-button .contact-bt2:hover {
   color: var(--principal-color);
 }
 
-#contact:checked ~ .contact-bt {
-  opacity: 0;
-  display: hidden;
-}
 #contact:checked ~ .contact-bt2 {
   opacity: 1;
   visibility: visible;
 }
+
+/* Botones de redes */
 .contact-button .icons {
   justify-self: center;
   margin-top: 80px;
@@ -200,7 +207,7 @@ header div .profession {
   display: inline-block;
   height: 70px;
   width: 70px;
-  margin-top: 20px;
+  margin-top: 26px;
   margin-right: -20px;
   text-align: center;
   line-height: 70px;
