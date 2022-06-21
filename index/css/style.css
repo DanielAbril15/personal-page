@@ -259,38 +259,89 @@ header div .profession {
 
 /*Espacio de los proyectos */
 .proyects-container {
-  height: 600px;
+  height: auto;
   display: grid;
-  grid-template-rows: 0.3fr 1fr;
+  grid-template-rows: 150px 1fr;
   align-content: center;
   background-color: var(--third-color);
 }
-.proyects-intro {
-  justify-self: center;
-}
-.proyects-intro p {
-  text-align: center;
-  margin-top: 30px;
-  color: var(--letters);
-}
+
 .title {
   font-size: 5rem;
   font-weight: bold;
   font-family: var(--font-profile);
+  text-align: center;
+  margin-top: 30px;
+  color: var(--letters);
 }
 
-.proyect-container_scroll {
-  max-width: 500px;
+.proyect-container_img {
+  max-width: 900px;
   width: 100%;
-  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  align-content: center;
   justify-self: center;
-  overflow-x: scroll;
-  display: flex;
-  scroll-snap-type: x mandatory;
+  gap: 30px;
 }
 
-.proyects-container .proyects {
-  font-size: 3rem;
+.card {
+  width: 300px;
+  height: 400px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card figure {
+  position: relative;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card figure img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  transition: all 500ms ease;
+}
+.card figure .img-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 400ms ease;
+  color: var(--letters);
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  transition: all 400ms ease;
+}
+
+.card figure .img-text p:nth-child(1) {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 20px;
+  margin-top: 250px;
+  margin-left: -100px;
+  margin-bottom: 300px;
+  transition: all 400ms ease;
+}
+.card figure .img-text p:nth-child(2) {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0px 20px;
+  transition: all 400ms ease;
+}
+.card figure:hover > .img-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card figure:hover .img-text p:nth-child(1) {
+  margin-bottom: 15px;
+  margin-left: 0;
 }
