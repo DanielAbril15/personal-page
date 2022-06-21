@@ -254,3 +254,13 @@ header div .profession {
   opacity: 1;
   visibility: visible;
 }
+
+/*Espacio de los proyectos */
+.proyects-container {
+  height: 600px;
+  background-color: #0077b5;
+}
+
+.proyects-container .proyects {
+  display: inline-block;
+}
