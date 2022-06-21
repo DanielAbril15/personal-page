@@ -1,10 +1,10 @@
 :root {
   --font-profile: "Libre Bodoni", serif;
   --font-text-content: "Montserrat", sans-serif;
-  --principal-color: #121215;
-  --color-profile2: rgb(187 152 112);
-  --secondary-color: #b7905d;
-  --secondary-color2: #000000;
+  --principal-color: #041c32;
+  --third-color: #064663;
+  --secondary-color: #ecb365;
+  --secondary-color2: #04293a;
   --letters: #efe2cd;
 }
 
@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   font-size: 62.5%;
+  font-family: var(--font-text-content);
 }
 /* parte superior de la pagina */
 header {
@@ -36,7 +37,7 @@ header div .profile {
   font-size: 7rem;
   font-weight: bold;
   font-family: var(--font-profile);
-  color: #b7905d;
+  color: var(--secondary-color);
 }
 
 header div .profession {
@@ -113,8 +114,9 @@ header div .profession {
 }
 .about-me-text h1 {
   color: var(--letters);
-  font-family: var(--font-text-content);
-  font-size: 4rem;
+  font-family: var(--font-profile);
+  font-size: 5rem;
+  font-weight: bold;
   margin-left: 20px;
   align-self: center;
 }
@@ -258,9 +260,37 @@ header div .profession {
 /*Espacio de los proyectos */
 .proyects-container {
   height: 600px;
-  background-color: #0077b5;
+  display: grid;
+  grid-template-rows: 0.3fr 1fr;
+  align-content: center;
+  background-color: var(--third-color);
+}
+.proyects-intro {
+  justify-self: center;
+}
+.proyects-intro p {
+  text-align: center;
+  margin-top: 30px;
+  color: var(--letters);
+}
+.title {
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: var(--font-profile);
+}
+
+.proyect-container_scroll {
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+  justify-self: center;
+  overflow-x: scroll;
+  display: flex;
+  scroll-snap-type: x mandatory;
 }
 
 .proyects-container .proyects {
-  display: inline-block;
+  font-size: 3rem;
+  width: 100%;
+  object-fit: cover;
 }
