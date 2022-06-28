@@ -269,6 +269,7 @@ header div .profession {
   display: grid;
   grid-template-rows: 150px 1fr;
   align-content: center;
+  justify-content: center;
   background-color: var(--third-color);
 }
 
@@ -298,6 +299,7 @@ header div .profession {
   justify-content: center;
   align-items: center;
   margin: 0px 30px 30px 0px;
+  margin-left: 20px;
 }
 
 .card-p figure {

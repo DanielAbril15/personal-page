@@ -36,6 +36,11 @@
     position: absolute;
   }
 }
+@media (max-width: 408px) {
+  .skill {
+    width: 290px;
+  }
+}
 
 @media (max-width: 1200px) {
   .skills_container {
