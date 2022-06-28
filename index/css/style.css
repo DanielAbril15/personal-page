@@ -127,6 +127,8 @@ header div .profession {
   color: var(--letters);
   font-family: var(--font-text-content);
   font-size: 3rem;
+  width: 90%;
+  line-height: 30px;
   padding: 30px;
   margin-left: 20px;
 }
