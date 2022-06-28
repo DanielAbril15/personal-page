@@ -81,6 +81,7 @@ header div .profession {
 
 /*Contenedor de la descripcion*/
 .about-me-container {
+  width: 100%;
   background-color: var(--principal-color);
   height: auto;
   display: grid;
@@ -89,13 +90,11 @@ header div .profession {
 }
 
 .about-me {
-  max-width: 1100px;
   margin: 50px 0px;
   align-content: center;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-self: center;
-  align-self: center;
 }
 
 /* Imagen */
@@ -265,6 +264,7 @@ header div .profession {
 
 /*Espacio de los proyectos */
 .proyects-container {
+  width: 100%;
   height: auto;
   display: grid;
   grid-template-rows: 150px 1fr;

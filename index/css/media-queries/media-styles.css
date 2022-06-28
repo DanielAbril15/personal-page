@@ -1,15 +1,13 @@
 @media (max-width: 992px) {
   .about-me {
-    width: 90%;
+    width: 100%;
     justify-content: center;
     justify-self: center;
   }
   .about-me-image {
     margin-bottom: 10px;
   }
-  .cont-md {
-    width: 90%;
-  }
+
   .about-me-text {
     width: 90%;
     display: flex;
@@ -21,6 +19,9 @@
   }
 }
 @media (max-width: 768px) {
+  .skills_container {
+    width: 100%;
+  }
   .skill {
     flex-direction: column;
     height: auto;
@@ -35,10 +36,22 @@
     visibility: hidden;
     position: absolute;
   }
+  .card-p {
+    margin-left: 20px;
+  }
+  .about-me-image {
+    width: 270px;
+  }
 }
 @media (max-width: 408px) {
   .skill {
     width: 290px;
+  }
+  .skills_container {
+    width: 290px;
+  }
+  .about-me-image {
+    width: 200px;
   }
 }
 
