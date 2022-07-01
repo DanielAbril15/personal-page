@@ -1,11 +1,12 @@
 :root {
   --font-profile: "Libre Bodoni", serif;
   --font-text-content: "Montserrat", sans-serif;
-  --principal-color: #041c32;
-  --third-color: #064663;
-  --secondary-color: #ecb365;
-  --secondary-color2: #04293a;
-  --letters: #efe2cd;
+  --principal-color: hsl(209, 85%, 11%);
+  --third-color: hsl(199, 89%, 21%);
+  --secondary-color: hsl(35, 78%, 66%);
+  --secondary-color2: hsl(199, 87%, 12%);
+  --letters: hsl(37, 52%, 87%);
+  --options-responsive: hsl(210, 62%, 22%);
 }
 
 * {
@@ -14,6 +15,9 @@
   padding: 0;
   font-size: 62.5%;
   font-family: var(--font-text-content);
+}
+html {
+  scroll-behavior: smooth;
 }
 /* parte superior de la pagina */
 header {
@@ -25,6 +29,45 @@ header {
   background-attachment: fixed;
   background-size: cover;
   display: grid;
+}
+header nav {
+  background-color: var(--principal-color);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 30px;
+  align-items: center;
+  position: fixed;
+  z-index: 300;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+}
+.logo img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+}
+nav ul {
+  display: flex;
+  column-gap: 40px;
+  z-index: 400;
+}
+
+nav ul li {
+  list-style-type: none;
+  cursor: pointer;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--letters);
+}
+.icon__burger {
+  cursor: pointer;
+  display: none;
 }
 
 header div {

@@ -1,3 +1,13 @@
+:root {
+  --font-profile: "Libre Bodoni", serif;
+  --font-text-content: "Montserrat", sans-serif;
+  --principal-color: hsl(209, 85%, 11%);
+  --third-color: hsl(199, 89%, 21%);
+  --secondary-color: hsl(35, 78%, 66%);
+  --secondary-color2: hsl(199, 87%, 12%);
+  --letters: hsl(37, 52%, 87%);
+  --options-responsive: hsl(210, 62%, 22%);
+}
 @media (max-width: 992px) {
   .about-me {
     width: 100%;
@@ -58,5 +68,30 @@
 @media (max-width: 1200px) {
   .skills_container {
     max-width: 700px;
+  }
+}
+@media (max-width: 600px) {
+  nav ul {
+    background-color: var(--options-responsive);
+    position: absolute;
+    top: 50px;
+    width: 40%;
+    right: 0;
+    row-gap: 1.8rem;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    margin-right: -100%;
+    z-index: 50;
+  }
+
+  .show__menu {
+    margin-right: 0;
+  }
+
+  .icon__burger-show {
+    display: block;
   }
 }

@@ -19,7 +19,22 @@
 </head>
 
 <body>
-    <header>
+    <header id="home">
+        <nav id="nav-bar">
+            <figure class="logo">
+                <img src="./images/icon/logo.jpg" alt="">
+            </figure>
+            <ul id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-me">Acerca de mi</a></li>
+                <li><a href="#portfolio">Portafolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div id="icon__burger" class="icon__burger icon__burger-show">
+                <img src="./images/icon/icon-hamburger.svg" alt="">
+            </div>
+        </nav>
         <div>
             <p class="profile">DANIEL ABRIL</p>
             <p class="profession">Programador FullStack</p>
@@ -29,7 +44,7 @@
 
     <main>
 
-        <section class="about-me-container">
+        <section class="about-me-container" id="about-me">
 
             <div class="about-me">
                 <figure class="about-me-image">
@@ -40,12 +55,12 @@
                     <h1>Quien soy?</h1>
                     <div class="about-me-text-info">
                         <div class="info">
-                            <p>Soy <span>Daniel Abril</span>, aspirante a programador fulls stack y
+                            <p>Soy <span>Daniel Abril</span>, aspirante a programador fullStack y
                                 actualmente estudiante de <span>Academlo</span>. Mi vida ha girado en torno a dos cosas:
                                 la tecnología y el deporte, siempre pensé que si me dedicaba a uno, el otro quedaría de
                                 lado,
                                 pero
-                                finalmente encontré a la programación. Aunque resulte inverosímil hablar de dos
+                                finalmente encontré la programación. Aunque resulte inverosímil hablar de dos
                                 disciplinas
                                 que
                                 a
@@ -79,7 +94,7 @@
 
         </section>
 
-        <section class="proyects-container">
+        <section class="proyects-container" id="portfolio">
             <div class="proyects-intro">
                 <p class="title">Proyectos</p>
 
@@ -173,7 +188,7 @@
 
         </section>
 
-        <section class="skills">
+        <section class="skills" id="skills">
 
             <div class="skills_container ">
                 <div class="skills-titles skill">
@@ -229,7 +244,7 @@
 
     </footer>
 
-    <script src="code.js"></script>
+    <script src="./index/js/code.js"></script>
 </body>
 
 </html>
