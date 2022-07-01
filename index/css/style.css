@@ -441,3 +441,59 @@ header div .profession {
 .cont-xl {
   width: 50%;
 }
+
+.contact-ft {
+  height: auto;
+  width: 100%;
+  background-color: var(--third-color);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-me {
+  display: grid;
+  width: 900px;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  margin: 80px 0px;
+  align-items: center;
+}
+
+.contact-me .contact_logo {
+  width: 250px;
+  height: 250px;
+  justify-self: center;
+}
+
+.contact-me .contact_logo img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.contact-me .contact_info {
+  justify-self: center;
+  width: 300px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--letters);
+  text-align: center;
+}
+
+.contact-me .contact_info img {
+  width: 80px;
+  height: 80px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: var(--principal-color);
+}
+
+footer p {
+  font-size: 1.6rem;
+  color: var(--letters);
+  text-align: center;
+}
