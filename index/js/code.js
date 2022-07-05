@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
 
   setTimeout(function () {
     loader.style.display = "none";
-  }, 3000);
+  }, 2000);
 });
 
 iconBurger.addEventListener("click", function () {
