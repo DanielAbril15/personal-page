@@ -102,6 +102,7 @@
     transition: all 0.5s;
     margin-right: -100%;
     z-index: 50;
+    border-bottom-left-radius: 10px;
   }
 
   .show__menu {
