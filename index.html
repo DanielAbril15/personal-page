@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="index/css/style.css">
     <link rel="stylesheet" href="index/css/fontello.css">
     <link rel="stylesheet" href="./index/css/media-queries/media-styles.css">
@@ -21,19 +22,22 @@
 <body>
     <header id="home">
         <nav id="nav-bar">
-            <figure class="logo">
-                <img src="./images/icon/logo.jpg" alt="">
-            </figure>
-            <ul id="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about-me">Acerca de mi</a></li>
-                <li><a href="#portfolio">Portafolio</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact-ft">Contacto</a></li>
-            </ul>
-            <div id="icon__burger" class="icon__burger icon__burger-show">
-                <img src="./images/icon/icon-hamburger.svg" alt="">
+            <div class="nav_container">
+                <figure class="logo">
+                    <img src="./images/icon/logo.jpg" alt="">
+                </figure>
+                <ul id="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-me">Acerca de mi</a></li>
+                    <li><a href="#portfolio">Portafolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact-ft">Contacto</a></li>
+                </ul>
+                <div id="icon__burger" class="icon__burger icon__burger-show">
+                    <img src="./images/icon/icon-hamburger.svg" alt="">
+                </div>
             </div>
+
         </nav>
         <div>
             <p class="profile">DANIEL ABRIL</p>
@@ -201,53 +205,29 @@
         </section>
 
         <section class="skills" id="skills">
+            <p>SKILLS</p>
+            <div class="swiper">
 
-            <div class="skills_container ">
-                <div class="skills-titles skill">
-                    <p class="cont-xl">SKILLS</p>
-                    <p class="cont-xl levels">LEVEL</p>
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide img-html"><img src="./images/skils/icons8-html-5-250.svg" alt=""></div>
+                    <div class="swiper-slide img-css"><img src="./images/skils/icons8-css3-250.svg" alt=""></div>
+                    <div class="swiper-slide img-js"><img src="./images/skils/icons8-javascript-logo-250.svg" alt="">
+                    </div>
+                    <div class="swiper-slide img-react"><img src="./images/skils/icons8-react-480.svg" alt=""></div>
+                    <div class="swiper-slide img-boostrap"><img src="./images/skils/icons8-bootstrap-240.svg" alt="">
+                    </div>
+
                 </div>
-                <div class="skill  html">
-                    <p class="cont-xl">HTML</p>
-                    <figure class="cont-xl">
-                        <img src="./images/icon/icon-star.svg" alt="">
-                        <img src="./images/icon/icon-star.svg" alt="">
-                        <img src="./images/icon/icon-star.svg" alt="">
-                        <img src="./images/icon/icon-star.svg" alt="">
-                        <img src="./images/icon/icon-star.svg" alt="">
-                    </figure>
-                </div>
-                <div class="skill css">
-                    <p class="cont-xl">CSS</p>
-                    <figure class="cont-xl">
-                        <img src="./images/icon/icon-star.svg" alt="">
-                        <img src="./images/icon/icon-star.svg" alt="">
-                        <img src="./images/icon/icon-star.svg" alt="">
-                        <img src="./images/icon/icon-star.svg" alt="">
-                        <img src="./images/icon/icon-star.svg" alt="">
-                    </figure>
-                </div>
-                <div class="skill JS">
-                    <p class="cont-xl">JAVASCRIPT</p>
-                    <figure class="cont-xl">
-                        <img src="./images/icon/icon-star.svg" alt="">
-                        <img src="./images/icon/icon-star.svg" alt="">
-                        <img src="./images/icon/icon-star.svg" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                    </figure>
-                </div>
-                <div class="skill react">
-                    <p class="cont-xl">REACT.JS</p>
-                    <figure class="cont-xl">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                    </figure>
-                </div>
+
+
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+
             </div>
+
         </section>
 
         <section id="contact-ft" class="contact-ft">
@@ -275,7 +255,36 @@
         <p>Copyright © And Made With Love All Rights Reserved.</p>
 
     </footer>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
 
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            slidesPerView: 1,
+            spaceBetween: 10,
+            // Responsive breakpoints
+            breakpoints: {
+
+                600: {
+                    slidesPerView: 2,
+                },
+
+                900: {
+                    slidesPerView: 3,
+
+                }
+            }
+
+        })
+    </script>
     <script src="./index/js/code.js"></script>
 </body>
 
