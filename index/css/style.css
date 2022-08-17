@@ -75,6 +75,11 @@ header nav {
   width: 100%;
   max-width: 1300px;
 }
+.nav_container .nav-languages {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
 .logo {
   width: 25px;
   height: 25px;
@@ -83,6 +88,40 @@ header nav {
   width: 100%;
   border-radius: 50%;
   object-fit: contain;
+}
+.languages {
+  font-size: 2rem;
+  color: var(--letters);
+}
+.check {
+  position: relative;
+  width: 50px;
+}
+.check:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background: #333;
+  border-radius: 25px;
+}
+.check:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 25px;
+  transition: 0.25s;
+  border: 2px solid #333;
+}
+.check:checked:after {
+  left: 25px;
+  border: 2px solid var(--secondary-color);
+}
+.check:checked:before {
+  background: var(--secondary-color);
 }
 nav ul {
   display: flex;

@@ -6,9 +6,22 @@ window.addEventListener("load", function () {
 
   setTimeout(function () {
     loader.style.display = "none";
-  }, 1200);
+  }, 700);
 });
 
 iconBurger.addEventListener("click", function () {
   menu.classList.toggle("show__menu");
 });
+
+const check = document.querySelector(".check");
+
+check.addEventListener("click", language);
+
+function language() {
+  let id = check.checked;
+  if (id === true) {
+    location.href = "../../en/index.html";
+  } else {
+    location.href = "../../index.html";
+  }
+}
